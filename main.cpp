@@ -16,7 +16,7 @@ int main(int, char**){
         std::cout <<"\nSecond eye of ender angle: ";
         std::cin >> tb;
         b=std::stof(tb);
-        std::cout <<"\nSpace between eye of ender throws (default=20): ";
+        std::cout <<"\nSpace between eye of ender throws: ";
         std::cin >>spc;
         if(spc==""){
             space=20;
@@ -38,7 +38,7 @@ int main(int, char**){
     //m1*x1+c1=m2*x2+c2
 
     float x=(c2-c1)/(m1-m2);
-    float y=m2*x+c2;
+    float y=abs(m2*x+c2);
 
-    std::cout <<"\nStronghold is around " <<abs(int(y))<<" blocks forward!";
+    std::cout <<"\nStronghold is around " <<int(y)<<" blocks forward in overworld or "<<int(y/8)<<" blocks in nether!";
 }
